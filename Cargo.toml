@@ -1,0 +1,13 @@
+[package]
+name = "blog_made_in_rust"
+version = "0.1.0"
+authors = ["ranon rat <66473662+ranon-rat@users.noreply.github.com>"]
+edition = "2018"
+repository="github.com/ranon-rat/blog-made-in-rust"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.10"
+rusqlite = "0.25.3"
+markdown = "0.3.0"
+serde = {version = "1.0", features = ["derive"]}
