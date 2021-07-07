@@ -1,8 +1,10 @@
 CREATE TABLE post_publications(
     id INTEGER PRIMARY KEY,
-    body TEXT,
+    
     title TEXT,
-    mineature_url TEXT
+    mineature_url TEXT,
+    body TEXT
+    
 );
 CREATE TABLE admins_ips(
     id INTEGER PRIMARY KEY,

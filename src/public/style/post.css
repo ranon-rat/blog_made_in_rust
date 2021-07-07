@@ -22,10 +22,7 @@
       </form>
     </div>
 */
-body{
-    background-color: black;
-    font-family: sans-serif;
-}
+
 #post-title{
     color:azure;
    font-size: 50px;
@@ -33,7 +30,7 @@ body{
 #new-publication{
     margin:auto;
     background-color: rgb(29, 0, 56);
-    width: 20em;
+    width: 400em;
   
     border-top: solid 10px;
     border-bottom: solid 10px;
@@ -63,4 +60,7 @@ body{
     border-color:rgb(29, 0, 56); 
     border-style: none;
     border-color: none;
+}
+textarea{
+  height: 500em;
 }
