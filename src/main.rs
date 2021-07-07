@@ -1,6 +1,11 @@
 
-#[macro_use] extern crate rocket;
 mod blog;
-fn main() {
-   // blog::router::setup_router().launch();
+
+
+
+
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+
+    blog::routes::setup_routes().await
 }
