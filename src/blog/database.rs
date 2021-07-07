@@ -21,5 +21,5 @@ pub fn insert_publication(publication:& PublicationPost) -> usize {
                 publication.mineature_url
             ],
         )
-        .unwrap()
+        .unwrap_or(0)
 }
