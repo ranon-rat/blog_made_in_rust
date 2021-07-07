@@ -20,7 +20,7 @@ pub async fn add_to_database(inf: Form<PublicationPost>) -> String {
 }
 pub async fn public_files(req: HttpRequest) -> Result<NamedFile> {
     let path: PathBuf =
-        PathBuf::from(String::from("src/public/") + req.match_info().query("filename"));
+        PathBuf::from(String::from("public/") + req.match_info().query("filename"));
 
     Ok(NamedFile::open(path)?) //.unwrap_or(NamedFile::open("src/public/sorry.txt").unwrap())
 }
@@ -29,5 +29,5 @@ pub async fn load_post(inf: Query<QueryPublication>) -> HttpResponse {
     HttpResponse::Ok().content_type("text/html").body(get_publication(inf.0).render().unwrap())
 }
 pub async fn send_post_file() -> Result<NamedFile> {
-    Ok(NamedFile::open("src/view/post.html")?)
+    Ok(NamedFile::open("templates/post.html")?)
 }

@@ -17,7 +17,7 @@ CREATE TABLE admins_ips(
 );
 */
 fn get_connection() -> Connection {
-    let conn = Connection::open("src/sql/database.db").unwrap();
+    let conn = Connection::open("sql/database.db").unwrap();
     conn
 }
 pub fn insert_publication(publication: &PublicationPost) -> usize {
