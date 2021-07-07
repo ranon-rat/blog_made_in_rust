@@ -1,0 +1,66 @@
+/*
+<div id="new publication">
+
+      <form method="POST" action="/post" target="dummyframe">
+        <input
+
+          id="input-info title"
+
+        /><br />
+        <input
+
+          id="input-info mineature"
+         
+        /><br />
+        <textarea name="body" id="body" placeholder="body"></textarea><br />
+        <input
+          type="submit"
+          id="submit-botton"
+          name="submit"
+          onclick='alert("send");;document.getElementById("body").value="";document.querySelector("#input-info\\ title").value="";document.querySelector("#input-info\\ mineature").value=""'
+        />
+      </form>
+    </div>
+*/
+body{
+    background-color: black;
+    font-family: sans-serif;
+}
+#post-title{
+    color:azure;
+   font-size: 50px;
+}
+#new-publication{
+    margin:auto;
+    background-color: rgb(29, 0, 56);
+    width: 20em;
+  
+    border-top: solid 10px;
+    border-bottom: solid 10px;
+    border-left:solid 10px ;
+    border-right: solid 10px;
+    border-radius: 10px;
+    border-color:rgb(29, 0, 56); 
+
+    box-shadow: 0 0 100px 6px #f0f;
+    text-align: center;
+}
+
+.input-info {
+    text-align: left;
+    margin:auto;
+    width: 20em;
+}
+#submit-botton{
+    background-color: rgb(66, 1, 128);
+    width: 5em;
+    height: 2em;
+    border-top: solid 10px;
+    border-bottom: solid 10px;
+    border-left:solid 10px ;
+    border-right: solid 10px;
+    border-radius: 5px;
+    border-color:rgb(29, 0, 56); 
+    border-style: none;
+    border-color: none;
+}

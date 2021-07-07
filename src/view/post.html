@@ -5,24 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>new publication</title>
+    <link rel="stylesheet" href="/public/style/post.css">
+    <link rel="stylesheet" href="/public/style/general.css">
   </head>
   <body>
-    <div id="new publication">
-      <form method="POST" action="/post">
-        <input
+      <h1 id="blog-made-in-rust">
+          blog made in rust
+      </h1>
+    <div id="new-publication">
+      <!--https://stackoverflow.com/questions/25983603/how-to-submit-an-html-form-without-redirection-->
+      <iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
+
+      <form method="POST" action="/post" target="dummyframe">
+        <h1 id="post-title">
+            New post
+        </h1>
+        <p><input
           type="text"
-          id="input-info title"
+          id=" title"
+          class="input-info"
           name="title"
           placeholder="title"
-        /><br />
+        />
+        <p />
+        <p>
+            <input placeholder="mineature url" type="text" id=" mineature" class="input-info" name="mineature_url"/>
+        <p />
+        <p>
+        <textarea  name="body"  id="body "  class="input-info"  placeholder="body"></textarea
+        ><p />
+        <p>
         <input
-          placeholder="mineature url"
-          type="text"
-          id="input-info mineature"
-          name="mineature_url"
-        /><br />
-        <textarea name="body" id="body" placeholder="body"></textarea><br />
-        <input type="submit" id="submit-botton" name="submit"/>
+          type="submit"
+          id="submit-botton"
+          name="submit"
+          onclick='alert("send");;document.getElementById("body").value="";document.querySelector("#input-info\\ title").value="";document.querySelector("#input-info\\ mineature").value=""'
+        />
+        </p>
       </form>
     </div>
   </body>

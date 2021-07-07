@@ -13,7 +13,8 @@ pub async fn add_to_database(inf: Form<PublicationPost>) -> String {
 }
 pub async fn public_files(req: HttpRequest) -> Result<NamedFile>{
 
-    let path: PathBuf = PathBuf::from(String::from("src/public")+req.match_info().query("filename"));
+    let path: PathBuf = PathBuf::from(String::from("src/public/")+req.match_info().query("filename"));
+ 
     Ok(NamedFile::open(path)?)//.unwrap_or(NamedFile::open("src/public/sorry.txt").unwrap())
 }
 pub async fn send_post_file()->Result<NamedFile>{
