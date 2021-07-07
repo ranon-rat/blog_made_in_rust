@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{title}}</title>
-    <link rel="stylesheet" href="/public/style/general.css" />
-</head>
-<body>
-    <h1>{{title}}</h1>
-    <img src={{mineature_url}}>
-<!--
+    <link rel="stylesheet" href="/public/style/general.css?asd" />
+    <link rel="stylesheet" href="/public/style/template.css" />
+  </head>
+  <body>
+    <div
+      style='background-image:linear-gradient(rgba(103, 19, 19, 0.738),rgba(27, 17, 17, 0.649)), url("{{mineature_url|safe}}");background-size: cover; background-position: center;height: 40em;position: relative;'
+    >
+      <h1 id="blog-made-in-rust" style="vertical-align: middle;text-align: center;">{{title}}</h1>
+    </div>
+
+    <!--
        pub title:String,
    pub mineature_url:String,
    pub body:String,
 -->
-    <div id=publication>
-{{body|safe}}
-
-        
-    </div>
-    
-</body>
+    <div id="publication">{{body|safe}}</div>
+  </body>
 </html>

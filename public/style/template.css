@@ -1,0 +1,15 @@
+#publication{
+    width: 100vh;
+    margin:auto;
+    height: 90vh;
+    background-color: rgb(28, 0, 56);
+      
+    border-top: solid 10px;
+    border-bottom: solid 10px;
+    border-left:solid 10px ;
+    border-right: solid 10px;
+    border-radius: 10px;
+    border-color:rgb(28, 0, 56);
+    border-radius: 10px;
+   
+}

@@ -8,6 +8,7 @@ pub async fn setup_routes()-> std::io::Result<()> {
             .route("/public/{filename:.*}", web::get().to(public_files))
             .route("/admin/new-post",web::get().to(send_post_file))
             .route("/publication",web::get().to(load_post))
+            .route("/",web::get().to(send_publications_html))
     })
     .bind("127.0.0.1:8080")?
     .run()

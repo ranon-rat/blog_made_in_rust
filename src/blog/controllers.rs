@@ -7,7 +7,7 @@ use actix_web::{
 use askama::Template;
 use std::path::PathBuf;
 
-use crate::blog::database::{get_publication, insert_publication};
+use crate::blog::database::{get_publication, insert_publication,get_publications};
 //http://127.0.0.1:8080/post?title=hello-world&body=yes_no&mineature_url=discord.com/1234..
 pub async fn add_to_database(inf: Form<PublicationPost>) -> String {
     format!(
@@ -18,16 +18,22 @@ pub async fn add_to_database(inf: Form<PublicationPost>) -> String {
         insert_publication(&inf.0)
     )
 }
+//http://localhost:8080/localhost/style/general.css
 pub async fn public_files(req: HttpRequest) -> Result<NamedFile> {
     let path: PathBuf =
         PathBuf::from(String::from("public/") + req.match_info().query("filename"));
 
     Ok(NamedFile::open(path)?) //.unwrap_or(NamedFile::open("src/public/sorry.txt").unwrap())
 }
-#[allow(dead_code)]
+//http://127.0.0.1:8080/publication?id=1&name=asdfa
 pub async fn load_post(inf: Query<QueryPublication>) -> HttpResponse {
     HttpResponse::Ok().content_type("text/html").body(get_publication(inf.0).render().unwrap())
 }
+//http://localhost:8080/admin/new-post
 pub async fn send_post_file() -> Result<NamedFile> {
     Ok(NamedFile::open("templates/post.html")?)
+}
+
+pub async fn send_publications_html()->HttpResponse{
+    HttpResponse::Ok().content_type("text/html").body(get_publications().unwrap()) 
 }
